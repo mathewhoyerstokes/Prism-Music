@@ -15,9 +15,9 @@ let images = {
 const Box = function () {
   const boxTag = useRef()
   const signTag = useRef()
-  
 
-  useEffect(() => { 
+
+  useEffect(() => {
     let anim
     let wresize
     let wmouse
@@ -40,7 +40,7 @@ const Box = function () {
 
       const lightPositions = [
         [-3, 3, 10],
-        [ 0,  3, 10], 
+        [ 0,  3, 10],
         [ 3, 3, 10]
       ]
 
@@ -102,7 +102,7 @@ const Box = function () {
         texture.flipY = true
 
         const geometry = new THREE.CylinderGeometry(15, 15, 2, 128, 8, true)
-        const material = new THREE.MeshBasicMaterial({ 
+        const material = new THREE.MeshBasicMaterial({
           side: THREE.BackSide,
           map: texture
         })
@@ -173,7 +173,7 @@ const Box = function () {
           signTag.current.style.top = event.clientY + "px"
 
           mouse.x = ( event.clientX / boxTag.current.clientWidth ) * 2 - 1;
-          mouse.y = - ( event.clientY / boxTag.current.clientHeight ) * 2 + 1;  
+          mouse.y = - ( event.clientY / boxTag.current.clientHeight ) * 2 + 1;
         }
       }
 
@@ -192,14 +192,14 @@ const Box = function () {
   }, [boxTag])
 
   return (
-    <div className="cover">
-      <div className="sign" ref={signTag}>
-        <span>Just</span>
-        <span className="amount">0.01</span>
-        <span>ETH</span>
+      <div className="cover">
+        <div className="sign" ref={signTag}>
+          <span>Just</span>
+          <span className="amount">0.01</span>
+          <span>ETH</span>
+        </div>
+        <div className="box" ref={boxTag}></div>
       </div>
-      <div className="box" ref={boxTag}></div>
-    </div>
   )
 }
 

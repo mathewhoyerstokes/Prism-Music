@@ -3,7 +3,7 @@ const BuyButton = function ({ accounts, connect, buy, canBuy, hasAccess, downloa
 
   if (accounts.length > 0) {
     if (hasAccess) {
-      button = (<button onClick={download}>Doddwnload</button>)
+      button = (<button onClick={download}>Download</button>)
     } else if (canBuy) {
       button = (<button onClick={buy}>Buy for 0.01 ETH</button>)
     } else {
@@ -12,7 +12,7 @@ const BuyButton = function ({ accounts, connect, buy, canBuy, hasAccess, downloa
   }
 
   return (
-    <footer>{button}</footer>
+      <footer>{button}</footer>
   )
 }
 

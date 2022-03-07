@@ -46,7 +46,6 @@ export default function Home() {
 
     contract.methods.totalSales().call()
       .then(setTotalSales)
-
   }
 
   const buy = async function () {
@@ -73,15 +72,15 @@ export default function Home() {
 
   const download = async function () {
     if (accounts.length > 0) {
-      
+
       const t = await web3.eth.personal.sign(sharedMessage, accounts[0])
-      
+
       try {
         const r = await fetch("/api/download", {
           method: "POST",
           body: JSON.stringify({ "signature": t })
         })
-    
+
         const json = await r.json()
 
         //window.location.href = json.url
