@@ -1,0 +1,34 @@
+Solidity - Smart contacts
+
+- Truffle install via NPM and inititate the project,
+    - 'truffle init'
+    - 'truffle create contact PrismSale' will create a new contact scaffold to work in.
+
+- Run Gananche to work and test on our own blockchain
+    - make a new workspace
+    - link to the truffle-config.js file inside the project file
+
+
+Smart Contract notes
+
+- values are in HEX values 
+- set max sales in contract 
+- Who is getting paid?
+
+* 'require' can be used in solidity to make checks, we can use require to check if something can be bought.
+* 'payable' is a special term to say that the function can accept money.
+
+
+tests
+ - are we gettig the right accounts (owner/charity)
+
+ *uploading smart contract to Front End
+  - what is a JSON interface? everything to do with the smart contract, it is located in the build folder. copy it and put it 
+  in the lib folder.
+  - using web3.eth.contract 
+
+
+*connect to a wallet
+*
+
+
